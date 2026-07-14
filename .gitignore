@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (keep structure, ignore large data)
+data/raw/*.json
+data/processed/*.json
+data/processed/*.csv
+data/processed/*.docx
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model cache
+.cache/
+models/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
