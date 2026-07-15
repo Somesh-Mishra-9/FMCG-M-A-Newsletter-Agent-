@@ -227,10 +227,4 @@ This is a **v1 demo** built within a 2-day window. Transparent about what it doe
 
 ---
 
-## 📄 License
-
-This project was built as an assignment submission. All code is original.
-
----
-
 *Built by [Somesh Kumar Mishra](https://github.com/Somesh-Mishra-9)*

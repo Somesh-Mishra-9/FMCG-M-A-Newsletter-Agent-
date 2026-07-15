@@ -153,11 +153,6 @@ with st.sidebar:
     st.markdown(f"NewsAPI: {'✅ Connected' if newsapi_key else '❌ Not set'}")
     st.markdown(f"Groq LLM: {'✅ Connected' if groq_key else '⚠️ Fallback mode'}")
 
-    st.markdown("---")
-    st.markdown(
-        "Built for [Benori Knowledge Solutions](https://www.benoriknowledge.com/) "
-        "FMCG M&A Intelligence Assignment"
-    )
 
 
 # ─── Main Content ───────────────────────────────────────────────────────────
