@@ -136,9 +136,14 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("##### Configuration")
 
-    # API key status indicators
-    newsapi_key = os.getenv("NEWSAPI_KEY", "") or st.secrets.get("NEWSAPI_KEY", "")
-    groq_key = os.getenv("GROQ_API_KEY", "") or st.secrets.get("GROQ_API_KEY", "")
+    # API key status indicators — try st.secrets for Streamlit Cloud, fall back to env vars
+    newsapi_key = os.getenv("NEWSAPI_KEY", "")
+    groq_key = os.getenv("GROQ_API_KEY", "")
+    try:
+        newsapi_key = newsapi_key or st.secrets.get("NEWSAPI_KEY", "")
+        groq_key = groq_key or st.secrets.get("GROQ_API_KEY", "")
+    except Exception:
+        pass  # No secrets.toml — running locally with .env
 
     if newsapi_key:
         os.environ["NEWSAPI_KEY"] = newsapi_key
